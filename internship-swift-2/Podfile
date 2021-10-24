@@ -7,8 +7,13 @@ target 'internship-swift-2' do
 
   # Pods for internship-swift-2
 pod ‘Firebase/AnalyticsWithoutAdIdSupport’
-pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
+pod 'GoogleSignIn', '~> 5.0'
 pod 'Firebase/Firestore'
 
+post_install do |installer|
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+  end
+end
 end

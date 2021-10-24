@@ -7,24 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BFC857B07F759E9DA0C18CE8 /* Pods_internship_swift_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76334690050C439F1DAE074 /* Pods_internship_swift_2.framework */; };
-		C019AEC327257E6E0096699A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C019AEC227257E6E0096699A /* GoogleService-Info.plist */; };
+		1DD8A58506CBA1A70B05FCC8 /* Pods_internship_swift_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAD92B19897DD81E9D66FD4 /* Pods_internship_swift_2.framework */; };
+		C03B504F2725AB6E00B8612F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03B504E2725AB6E00B8612F /* AuthViewModel.swift */; };
+		C03B50542725BB9400B8612F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C03B50522725B84800B8612F /* GoogleService-Info.plist */; };
+		C07345E02725E5BA003376DE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07345DF2725E5BA003376DE /* MainView.swift */; };
+		C07345E22725E5E1003376DE /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07345E12725E5E1003376DE /* InitialView.swift */; };
 		C0E97DBB27222BD000B5ACB1 /* internship_swift_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E97DBA27222BD000B5ACB1 /* internship_swift_2App.swift */; };
-		C0E97DBD27222BD000B5ACB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E97DBC27222BD000B5ACB1 /* ContentView.swift */; };
+		C0E97DBD27222BD000B5ACB1 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E97DBC27222BD000B5ACB1 /* AuthView.swift */; };
 		C0E97DBF27222BD200B5ACB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0E97DBE27222BD200B5ACB1 /* Assets.xcassets */; };
 		C0E97DC227222BD200B5ACB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0E97DC127222BD200B5ACB1 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		60A8EC29D635B05835A211E5 /* Pods-internship-swift-2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-internship-swift-2.debug.xcconfig"; path = "Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2.debug.xcconfig"; sourceTree = "<group>"; };
-		A76334690050C439F1DAE074 /* Pods_internship_swift_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_internship_swift_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C019AEC227257E6E0096699A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		64B2BBCF543795C453E11443 /* Pods-internship-swift-2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-internship-swift-2.release.xcconfig"; path = "Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2.release.xcconfig"; sourceTree = "<group>"; };
+		6AAD92B19897DD81E9D66FD4 /* Pods_internship_swift_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_internship_swift_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C019AEC42725A8BB0096699A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C03B504E2725AB6E00B8612F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		C03B50522725B84800B8612F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C07345DF2725E5BA003376DE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C07345E12725E5E1003376DE /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		C0E97DB727222BD000B5ACB1 /* DeviceManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E97DBA27222BD000B5ACB1 /* internship_swift_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = internship_swift_2App.swift; sourceTree = "<group>"; };
-		C0E97DBC27222BD000B5ACB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C0E97DBC27222BD000B5ACB1 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		C0E97DBE27222BD200B5ACB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0E97DC127222BD200B5ACB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D1D9FC9475372CE486348158 /* Pods-internship-swift-2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-internship-swift-2.release.xcconfig"; path = "Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2.release.xcconfig"; sourceTree = "<group>"; };
+		EE26B45E73B515DF3B1797AB /* Pods-internship-swift-2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-internship-swift-2.debug.xcconfig"; path = "Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,18 +39,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC857B07F759E9DA0C18CE8 /* Pods_internship_swift_2.framework in Frameworks */,
+				1DD8A58506CBA1A70B05FCC8 /* Pods_internship_swift_2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7517F5609127F100CB8EF8EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AAD92B19897DD81E9D66FD4 /* Pods_internship_swift_2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A01E40D8256699815999F9E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				60A8EC29D635B05835A211E5 /* Pods-internship-swift-2.debug.xcconfig */,
-				D1D9FC9475372CE486348158 /* Pods-internship-swift-2.release.xcconfig */,
+				EE26B45E73B515DF3B1797AB /* Pods-internship-swift-2.debug.xcconfig */,
+				64B2BBCF543795C453E11443 /* Pods-internship-swift-2.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -54,7 +69,7 @@
 				C0E97DB927222BD000B5ACB1 /* internship-swift-2 */,
 				C0E97DB827222BD000B5ACB1 /* Products */,
 				8A01E40D8256699815999F9E /* Pods */,
-				DE66741215B42E67195F1068 /* Frameworks */,
+				7517F5609127F100CB8EF8EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,11 +84,15 @@
 		C0E97DB927222BD000B5ACB1 /* internship-swift-2 */ = {
 			isa = PBXGroup;
 			children = (
-				C019AEC227257E6E0096699A /* GoogleService-Info.plist */,
+				C03B50522725B84800B8612F /* GoogleService-Info.plist */,
+				C019AEC42725A8BB0096699A /* Info.plist */,
 				C0E97DBA27222BD000B5ACB1 /* internship_swift_2App.swift */,
-				C0E97DBC27222BD000B5ACB1 /* ContentView.swift */,
+				C0E97DBC27222BD000B5ACB1 /* AuthView.swift */,
 				C0E97DBE27222BD200B5ACB1 /* Assets.xcassets */,
 				C0E97DC027222BD200B5ACB1 /* Preview Content */,
+				C03B504E2725AB6E00B8612F /* AuthViewModel.swift */,
+				C07345DF2725E5BA003376DE /* MainView.swift */,
+				C07345E12725E5E1003376DE /* InitialView.swift */,
 			);
 			path = "internship-swift-2";
 			sourceTree = "<group>";
@@ -86,14 +105,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		DE66741215B42E67195F1068 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A76334690050C439F1DAE074 /* Pods_internship_swift_2.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,11 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0E97DC527222BD200B5ACB1 /* Build configuration list for PBXNativeTarget "internship-swift-2" */;
 			buildPhases = (
-				978A2402F1445E0F165DCEA4 /* [CP] Check Pods Manifest.lock */,
+				24DA37DBB4BB43C03BC2768D /* [CP] Check Pods Manifest.lock */,
 				C0E97DB327222BD000B5ACB1 /* Sources */,
 				C0E97DB427222BD000B5ACB1 /* Frameworks */,
 				C0E97DB527222BD000B5ACB1 /* Resources */,
-				DDEC33132AEA0296922D6ADC /* [CP] Embed Pods Frameworks */,
+				56CEFBFDB1DF2ACBF4484532 /* [CP] Embed Pods Frameworks */,
+				B76C09878C3D5CF472A6C14D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,14 +168,14 @@
 			files = (
 				C0E97DC227222BD200B5ACB1 /* Preview Assets.xcassets in Resources */,
 				C0E97DBF27222BD200B5ACB1 /* Assets.xcassets in Resources */,
-				C019AEC327257E6E0096699A /* GoogleService-Info.plist in Resources */,
+				C03B50542725BB9400B8612F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		978A2402F1445E0F165DCEA4 /* [CP] Check Pods Manifest.lock */ = {
+		24DA37DBB4BB43C03BC2768D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -185,7 +197,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DDEC33132AEA0296922D6ADC /* [CP] Embed Pods Frameworks */ = {
+		56CEFBFDB1DF2ACBF4484532 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -202,6 +214,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B76C09878C3D5CF472A6C14D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -209,7 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0E97DBD27222BD000B5ACB1 /* ContentView.swift in Sources */,
+				C0E97DBD27222BD000B5ACB1 /* AuthView.swift in Sources */,
+				C07345E02725E5BA003376DE /* MainView.swift in Sources */,
+				C03B504F2725AB6E00B8612F /* AuthViewModel.swift in Sources */,
+				C07345E22725E5E1003376DE /* InitialView.swift in Sources */,
 				C0E97DBB27222BD000B5ACB1 /* internship_swift_2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +286,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -315,6 +348,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -326,6 +360,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -335,7 +370,7 @@
 		};
 		C0E97DC627222BD200B5ACB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60A8EC29D635B05835A211E5 /* Pods-internship-swift-2.debug.xcconfig */;
+			baseConfigurationReference = EE26B45E73B515DF3B1797AB /* Pods-internship-swift-2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -344,6 +379,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"internship-swift-2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "internship-swift-2/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -365,7 +401,7 @@
 		};
 		C0E97DC727222BD200B5ACB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1D9FC9475372CE486348158 /* Pods-internship-swift-2.release.xcconfig */;
+			baseConfigurationReference = 64B2BBCF543795C453E11443 /* Pods-internship-swift-2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -374,6 +410,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"internship-swift-2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "internship-swift-2/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
