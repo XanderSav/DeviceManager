@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFC857B07F759E9DA0C18CE8 /* Pods_internship_swift_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76334690050C439F1DAE074 /* Pods_internship_swift_2.framework */; };
+		C019AEC327257E6E0096699A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C019AEC227257E6E0096699A /* GoogleService-Info.plist */; };
 		C0E97DBB27222BD000B5ACB1 /* internship_swift_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E97DBA27222BD000B5ACB1 /* internship_swift_2App.swift */; };
 		C0E97DBD27222BD000B5ACB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E97DBC27222BD000B5ACB1 /* ContentView.swift */; };
 		C0E97DBF27222BD200B5ACB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0E97DBE27222BD200B5ACB1 /* Assets.xcassets */; };
@@ -14,11 +16,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60A8EC29D635B05835A211E5 /* Pods-internship-swift-2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-internship-swift-2.debug.xcconfig"; path = "Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2.debug.xcconfig"; sourceTree = "<group>"; };
+		A76334690050C439F1DAE074 /* Pods_internship_swift_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_internship_swift_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C019AEC227257E6E0096699A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C0E97DB727222BD000B5ACB1 /* DeviceManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E97DBA27222BD000B5ACB1 /* internship_swift_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = internship_swift_2App.swift; sourceTree = "<group>"; };
 		C0E97DBC27222BD000B5ACB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C0E97DBE27222BD200B5ACB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0E97DC127222BD200B5ACB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D1D9FC9475372CE486348158 /* Pods-internship-swift-2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-internship-swift-2.release.xcconfig"; path = "Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +32,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC857B07F759E9DA0C18CE8 /* Pods_internship_swift_2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A01E40D8256699815999F9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60A8EC29D635B05835A211E5 /* Pods-internship-swift-2.debug.xcconfig */,
+				D1D9FC9475372CE486348158 /* Pods-internship-swift-2.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C0E97DAE27222BD000B5ACB1 = {
 			isa = PBXGroup;
 			children = (
 				C0E97DB927222BD000B5ACB1 /* internship-swift-2 */,
 				C0E97DB827222BD000B5ACB1 /* Products */,
+				8A01E40D8256699815999F9E /* Pods */,
+				DE66741215B42E67195F1068 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +69,7 @@
 		C0E97DB927222BD000B5ACB1 /* internship-swift-2 */ = {
 			isa = PBXGroup;
 			children = (
+				C019AEC227257E6E0096699A /* GoogleService-Info.plist */,
 				C0E97DBA27222BD000B5ACB1 /* internship_swift_2App.swift */,
 				C0E97DBC27222BD000B5ACB1 /* ContentView.swift */,
 				C0E97DBE27222BD200B5ACB1 /* Assets.xcassets */,
@@ -67,6 +86,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DE66741215B42E67195F1068 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A76334690050C439F1DAE074 /* Pods_internship_swift_2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0E97DC527222BD200B5ACB1 /* Build configuration list for PBXNativeTarget "internship-swift-2" */;
 			buildPhases = (
+				978A2402F1445E0F165DCEA4 /* [CP] Check Pods Manifest.lock */,
 				C0E97DB327222BD000B5ACB1 /* Sources */,
 				C0E97DB427222BD000B5ACB1 /* Frameworks */,
 				C0E97DB527222BD000B5ACB1 /* Resources */,
+				DDEC33132AEA0296922D6ADC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,10 +156,53 @@
 			files = (
 				C0E97DC227222BD200B5ACB1 /* Preview Assets.xcassets in Resources */,
 				C0E97DBF27222BD200B5ACB1 /* Assets.xcassets in Resources */,
+				C019AEC327257E6E0096699A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		978A2402F1445E0F165DCEA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-internship-swift-2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDEC33132AEA0296922D6ADC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-internship-swift-2/Pods-internship-swift-2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C0E97DB327222BD000B5ACB1 /* Sources */ = {
@@ -263,6 +335,7 @@
 		};
 		C0E97DC627222BD200B5ACB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60A8EC29D635B05835A211E5 /* Pods-internship-swift-2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,6 +365,7 @@
 		};
 		C0E97DC727222BD200B5ACB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1D9FC9475372CE486348158 /* Pods-internship-swift-2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
