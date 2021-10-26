@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct AuthView: View {@EnvironmentObject var viewModel: AuthViewModel
+struct AuthView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack {

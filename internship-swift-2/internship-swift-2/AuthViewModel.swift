@@ -49,7 +49,6 @@ class AuthViewModel: NSObject, ObservableObject {
     }
     
     private func checkAuth() {
-        let state = GIDSignIn.sharedInstance().hasPreviousSignIn()
         GIDSignIn.sharedInstance().restorePreviousSignIn()
     }
 }

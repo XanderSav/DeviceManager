@@ -27,8 +27,10 @@ struct MainView: View {
                     else {
                         Text("Free to use").font(.title)
                     }
-                }.navigationTitle("DeviceManager")
-            }
+                }.onTapGesture(perform: {
+                    self.devicesVm.addData(device: device)
+                })
+            }.navigationTitle("DeviceManager")
             .frame(maxWidth: .infinity)
             .background(Color(.secondarySystemBackground))
             .cornerRadius(12)

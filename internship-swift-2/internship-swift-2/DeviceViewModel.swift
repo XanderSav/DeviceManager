@@ -30,4 +30,28 @@ class DeviceViewModel: ObservableObject {
             }
         }
     }
+    
+    func addData(device: Device) {
+        do {
+            let devicesRef = db.collection("devices")
+            devicesRef.whereField("UDID", isEqualTo: device.UDID!).getDocuments(completion: { querySnapshot, err in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    if (querySnapshot!.documents.count == 1) {
+                        devicesRef.document(querySnapshot!.documents[0].documentID).setData(["usedBy": "azazazaz"], merge: true)
+                    }
+                    else {
+                        print("No documents found by DeviceID or multiple documents found")
+                    }
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                    }
+                }
+            })
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
 }
