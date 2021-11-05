@@ -41,7 +41,7 @@ struct AuthView: View {
                       message: Text(viewModel.errorMessage!),
                       dismissButton: .default(Text("OK"), action:{viewModel.dismissErrorPopup()}))
             })
-            switch(viewModel.state){
+            switch(authService.authStatus){
             case .initial:
                 ProgressIndicator()
             case .signedIn:

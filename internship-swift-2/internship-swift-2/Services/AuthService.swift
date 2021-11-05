@@ -11,7 +11,7 @@ import Firebase
 
 class AuthService: NSObject, ObservableObject {
     
-    @Published var authStatus: SignInState = .signedOut
+    @Published var authStatus: SignInState = .initial
     @Published var user: UserDataKeeper
     var completionHandler: ((SignInState, Error?) -> Void)? = nil
     

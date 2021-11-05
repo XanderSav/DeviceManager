@@ -11,7 +11,6 @@ import SwiftUI
 class AuthViewModel: NSObject, ObservableObject {
     var authService: AuthService?
     
-    @Published var state: SignInState = .initial
     @Published var errorMessage: String?
     @Published var showError: Bool = false
     
@@ -26,7 +25,7 @@ class AuthViewModel: NSObject, ObservableObject {
     }
     
     func dismissErrorPopup() {
-        state = .signedOut
+        authService?.authStatus = .signedOut
     }
     
     func signIn() {
@@ -47,7 +46,6 @@ class AuthViewModel: NSObject, ObservableObject {
                 self?.errorMessage = err?.localizedDescription
                 self?.showError = true
             }
-            self?.state = state
         }
     }
 }
