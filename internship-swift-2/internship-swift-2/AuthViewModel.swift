@@ -6,73 +6,48 @@
 //
 
 import Foundation
-import Firebase
-import GoogleSignIn
+import SwiftUI
 
 class AuthViewModel: NSObject, ObservableObject {
+    var authService: AuthService?
     
-    enum SignInState {
-        case signedIn
-        case signedOut
-    }
-    
-    @Published var state: SignInState = .signedOut
+    @Published var state: SignInState = .initial
+    @Published var errorMessage: String?
+    @Published var showError: Bool = false
     
     override init() {
         super.init()
-
-        setupGoogleSignIn()
+    }
+    
+    func initialize(authService: AuthService){
+        self.authService = authService
+        handleAuthCallback()
         checkAuth()
     }
     
+    func dismissErrorPopup() {
+        state = .signedOut
+    }
+    
     func signIn() {
-        if GIDSignIn.sharedInstance().currentUser == nil {
-          GIDSignIn.sharedInstance().presentingViewController = UIApplication.shared.windows.first?.rootViewController
-          GIDSignIn.sharedInstance().signIn()
-        }
+        authService?.signIn()
     }
     
     func signOut() {
-        GIDSignIn.sharedInstance().signOut()
-
-        do {
-          try Auth.auth().signOut()
-
-          state = .signedOut
-        } catch let signOutError as NSError {
-          print(signOutError.localizedDescription)
-        }
-    }
-    
-    private func setupGoogleSignIn() {
-        GIDSignIn.sharedInstance().delegate = self
+        authService?.signOut()
     }
     
     private func checkAuth() {
-        GIDSignIn.sharedInstance().restorePreviousSignIn()
-    }
-}
-
-extension AuthViewModel: GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if error == nil {
-          firebaseAuthentication(withUser: user)
-        } else {
-          print(error.debugDescription)
-        }
+        authService?.checkAuth()
     }
     
-    private func firebaseAuthentication(withUser user: GIDGoogleUser) {
-        if let authentication = user.authentication {
-            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-
-          Auth.auth().signIn(with: credential) { (_, error) in
-              if let error = error {
-                  print(error.localizedDescription)
-              } else {
-              self.state = .signedIn
+    private func handleAuthCallback() {
+        authService?.completionHandler = {[weak self] state, err in
+            if(err != nil) {
+                self?.errorMessage = err?.localizedDescription
+                self?.showError = true
             }
-          }
+            self?.state = state
         }
     }
 }

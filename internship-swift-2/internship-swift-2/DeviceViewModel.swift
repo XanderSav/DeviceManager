@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
+import SwiftUI
 
 class DeviceViewModel: ObservableObject {
     
@@ -16,6 +17,10 @@ class DeviceViewModel: ObservableObject {
     
     func fetchData() {
         db.collection("devices").addSnapshotListener { (querySnapshot, error) in
+            if (error != nil)
+            {
+                print(error?.localizedDescription)
+            }
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
                 return
@@ -31,27 +36,26 @@ class DeviceViewModel: ObservableObject {
         }
     }
     
-    func addData(device: Device) {
-        do {
-            let devicesRef = db.collection("devices")
-            devicesRef.whereField("UDID", isEqualTo: device.UDID!).getDocuments(completion: { querySnapshot, err in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    if (querySnapshot!.documents.count == 1) {
-                        devicesRef.document(querySnapshot!.documents[0].documentID).setData(["usedBy": "azazazaz"], merge: true)
-                    }
-                    else {
-                        print("No documents found by DeviceID or multiple documents found")
-                    }
-                    for document in querySnapshot!.documents {
-                        print("\(document.documentID) => \(document.data())")
+    func updateDeviceData(device: Device, user: UserDataKeeper) {
+        let devicesRef = db.collection("devices")
+        devicesRef.whereField("UDID", isEqualTo: device.UDID!).getDocuments(completion: { querySnapshot, err in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                if (querySnapshot!.documents.count == 1) {
+                    let docRef = devicesRef.document(querySnapshot!.documents[0].documentID)
+                    let data = device.usedBy == user.email ? "" : user.email
+                    docRef.updateData(["usedBy": data]) {
+                        err in
+                        if let err = err {
+                            print("error on attempt to update field: \(err)")
+                        }
                     }
                 }
-            })
-        }
-        catch {
-            print(error.localizedDescription)
-        }
+                else {
+                    print("No documents found by DeviceID or multiple documents found")
+                }
+            }
+        })
     }
 }

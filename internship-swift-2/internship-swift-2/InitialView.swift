@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct InitialView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
-
-      var body: some View {
-        switch viewModel.state {
+    @EnvironmentObject var authService: AuthService
+    
+    var body: some View {
+        switch authService.authStatus {
+        case .initial: AuthView()
         case .signedIn: MainView()
         case .signedOut: AuthView()
         }
-      }
+    }
 }
 
 struct InitialView_Previews: PreviewProvider {
     static var previews: some View {
-        InitialView()
+        InitialView().environmentObject(AuthService(dataKeeper: UserDataKeeper(email: "aaaa@aaa.aa",
+                           uid: "123355378")))
     }
 }

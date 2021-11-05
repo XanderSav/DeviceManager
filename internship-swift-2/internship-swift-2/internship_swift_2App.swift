@@ -7,20 +7,20 @@
 
 import SwiftUI
 import Firebase
-import GoogleSignIn
 
 @main
 struct internship_swift_2App: App {
-    @StateObject var viewModel = AuthViewModel()
+    @StateObject var authService: AuthService
     
     init() {
+        _authService = StateObject(wrappedValue: AuthService(dataKeeper: UserDataKeeper()))
         setupAuthentication()
     }
     
     var body: some Scene {
         WindowGroup {
             InitialView()
-                .environmentObject(viewModel)
+                .environmentObject(authService)
         }
     }
 }
@@ -28,6 +28,5 @@ struct internship_swift_2App: App {
 extension internship_swift_2App {
   private func setupAuthentication() {
      FirebaseApp.configure()
-     GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
   }
 }
