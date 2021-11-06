@@ -12,10 +12,20 @@ struct AuthView: View {
     @EnvironmentObject var authService: AuthenticationService
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .onAppear(perform: {
-                viewModel.initialize(authService: authService)
-            })
+        ZStack {
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            switch(authService.authStatus){
+            case .initial:
+                ProgressIndicator()
+            case .signedIn:
+                EmptyView()
+            case .signedOut:
+                EmptyView()
+            }
+        }
+        .onAppear(perform: {
+            viewModel.initialize(authService: authService)
+        })
     }
 }
 
