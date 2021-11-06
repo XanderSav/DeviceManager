@@ -8,7 +8,7 @@
 import Foundation
 
 
-class DevicesViewModel {
+class DevicesViewModel: ObservableObject {
     
     @Published var devices = [Device]()
 }

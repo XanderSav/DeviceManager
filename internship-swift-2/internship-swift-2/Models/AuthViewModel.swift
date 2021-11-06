@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AuthViewModel {
+class AuthViewModel: ObservableObject {
     var authService: AuthenticationService?
     
     func initialize(authService: AuthenticationService){
