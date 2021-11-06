@@ -18,7 +18,8 @@ struct internship_swift_2App: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            InitialView()
+                .environmentObject(authService)
         }
     }
 }
