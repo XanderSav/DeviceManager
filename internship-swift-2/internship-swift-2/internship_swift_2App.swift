@@ -14,7 +14,7 @@ struct internship_swift_2App: App {
     
     init() {
         _authService = StateObject(wrappedValue: AuthService(dataKeeper: UserDataKeeper()))
-        setupAuthentication()
+        setupFirebase()
     }
     
     var body: some Scene {
@@ -26,7 +26,7 @@ struct internship_swift_2App: App {
 }
 
 extension internship_swift_2App {
-  private func setupAuthentication() {
+  private func setupFirebase() {
      FirebaseApp.configure()
   }
 }
