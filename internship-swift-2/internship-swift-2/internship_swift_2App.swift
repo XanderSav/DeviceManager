@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct internship_swift_2App: App {
+    
+    @StateObject var authService: AuthenticationService
+    
+    init() {
+        _authService = StateObject(wrappedValue: AuthenticationService(user: User()))
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            InitialView()
+                .environmentObject(authService)
         }
     }
 }
