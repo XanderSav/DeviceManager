@@ -7,7 +7,13 @@
 
 import Foundation
 
-struct Device {
+struct Device: Identifiable, Codable {
+    var id: String? {
+        get {
+            return UDID
+        }
+    }
+    
     var UDID: String?
     var displayName: String?
     var usedBy: String?

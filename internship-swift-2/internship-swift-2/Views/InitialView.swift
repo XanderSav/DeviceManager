@@ -11,12 +11,16 @@ struct InitialView: View {
     @EnvironmentObject var authService: AuthenticationService
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        switch authService.authStatus {
+        case .initial: AuthView()
+        case .signedIn: MainView()
+        case .signedOut: AuthView()
+        }
     }
 }
 
 struct InitialView_Previews: PreviewProvider {
     static var previews: some View {
-        InitialView()
+        InitialView().environmentObject(AuthenticationService(user: User(email: "", uid: "")))
     }
 }

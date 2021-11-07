@@ -11,9 +11,40 @@ struct MainView: View {
     @StateObject private var devicesVm = DevicesViewModel()
     @EnvironmentObject var authService: AuthenticationService
     
-    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationView {
+            List(devicesVm.devices) { device in
+                VStack(alignment: .leading) {
+                    Text(device.displayName ?? "").font(.title)
+                    Text(device.UDID ?? "").font(.footnote)
+                    if (device.usedBy != nil && device.usedBy != "") {
+                        Text(device.usedBy!).font(.body)
+                    }
+                    else {
+                        Text("Free to use").font(.body)
+                    }
+                }
+                .frame(
+                    minWidth: 0,
+                    maxWidth: .infinity,
+                    minHeight: 0,
+                    maxHeight: .infinity,
+                    alignment: .topLeading
+                )
+                .onTapGesture(perform: {
+                    self.devicesVm.updateDeviceData(device: device, user: authService.user)
+                })
+            }.navigationTitle("DeviceManager")
+                .frame(maxWidth: .infinity)
+                .background(Color(.secondarySystemBackground))
+                .cornerRadius(12)
+                .padding(.top)
+                .onAppear() {
+                    self.devicesVm.fetchData()
+                }
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
