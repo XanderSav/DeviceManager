@@ -13,4 +13,12 @@ class AuthViewModel: ObservableObject {
     func initialize(authService: AuthenticationService){
         self.authService = authService
     }
+    
+    func signIn() {
+        authService?.signIn()
+    }
+    
+    func checkAuth() {
+        authService?.checkAuth()
+    }
 }
