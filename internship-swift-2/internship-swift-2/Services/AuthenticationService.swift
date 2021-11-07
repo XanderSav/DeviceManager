@@ -13,6 +13,8 @@ class AuthenticationService: NSObject, ObservableObject {
     var authStatus: SignInState = .initial
     var user: User
     
+    var errorHandler: ((Error?) -> Void)? = nil
+    
     init(user: User) {
         self.user = user
         super.init()
@@ -45,7 +47,7 @@ extension AuthenticationService: GIDSignInDelegate {
         if error == nil {
           firebaseAuthentication(withUser: user)
         } else {
-            print(error.localizedDescription)
+            self.errorHandler?(error)
             self.authStatus = .signedOut
         }
     }
@@ -56,12 +58,11 @@ extension AuthenticationService: GIDSignInDelegate {
 
           Auth.auth().signIn(with: credential) { (result, error) in
               if let error = error {
-                  print(error.localizedDescription)
+                  self.errorHandler?(error)
                   self.authStatus = .signedOut
               } else {
                   guard let result = result else {
                       self.authStatus = .signedOut
-                      print(AuthErrorCode(rawValue: 17020).debugDescription)
                       return
                   }
                   self.authStatus = .signedIn

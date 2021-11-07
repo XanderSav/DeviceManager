@@ -34,6 +34,11 @@ struct AuthView: View {
                 }
                 .buttonStyle(AuthenticationButtonStyle())
             }
+            .alert(isPresented: $viewModel.showError, content: {
+                Alert(title: Text("Error"),
+                      message: Text(viewModel.errorMessage!),
+                      dismissButton: .default(Text("OK"), action:{viewModel.dismissErrorPopup()}))
+            })
             switch(authService.authStatus){
             case .initial:
                 ProgressIndicator()
