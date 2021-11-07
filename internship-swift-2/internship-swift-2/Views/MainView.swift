@@ -32,6 +32,9 @@ struct MainView: View {
                     maxHeight: .infinity,
                     alignment: .topLeading
                 )
+                .onTapGesture(perform: {
+                    self.devicesVm.updateDeviceData(device: device, user: authService.user)
+                })
             }.navigationTitle("DeviceManager")
                 .frame(maxWidth: .infinity)
                 .background(Color(.secondarySystemBackground))
