@@ -17,6 +17,7 @@
 		C00F5D7C2737122F00E84D8A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F5D7B2737122F00E84D8A /* MainView.swift */; };
 		C00F5D7E2737123C00E84D8A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F5D7D2737123C00E84D8A /* AuthView.swift */; };
 		C00F5D802737147800E84D8A /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00F5D7F2737147800E84D8A /* ProgressIndicator.swift */; };
+		C04E8A9F27388D1900DA74CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04E8A9E27388D1900DA74CE /* GoogleService-Info.plist */; };
 		C0E97DBB27222BD000B5ACB1 /* internship_swift_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E97DBA27222BD000B5ACB1 /* internship_swift_2App.swift */; };
 		C0E97DBF27222BD200B5ACB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0E97DBE27222BD200B5ACB1 /* Assets.xcassets */; };
 		C0E97DC227222BD200B5ACB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0E97DC127222BD200B5ACB1 /* Preview Assets.xcassets */; };
@@ -35,6 +36,8 @@
 		C00F5D7B2737122F00E84D8A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C00F5D7D2737123C00E84D8A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		C00F5D7F2737147800E84D8A /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		C04E8A9E27388D1900DA74CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C04E8AA027388D5600DA74CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C0E97DB727222BD000B5ACB1 /* DeviceManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E97DBA27222BD000B5ACB1 /* internship_swift_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = internship_swift_2App.swift; sourceTree = "<group>"; };
 		C0E97DBE27222BD200B5ACB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 		C0E97DB927222BD000B5ACB1 /* internship-swift-2 */ = {
 			isa = PBXGroup;
 			children = (
+				C04E8AA027388D5600DA74CE /* Info.plist */,
+				C04E8A9E27388D1900DA74CE /* GoogleService-Info.plist */,
 				C00F5D782737120E00E84D8A /* Views */,
 				C00F5D73273710AC00E84D8A /* Models */,
 				C00F5D6E27370E6D00E84D8A /* Enumerations */,
@@ -221,6 +226,7 @@
 			files = (
 				C0E97DC227222BD200B5ACB1 /* Preview Assets.xcassets in Resources */,
 				C0E97DBF27222BD200B5ACB1 /* Assets.xcassets in Resources */,
+				C04E8A9F27388D1900DA74CE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +444,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"internship-swift-2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "internship-swift-2/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,6 +475,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"internship-swift-2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "internship-swift-2/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

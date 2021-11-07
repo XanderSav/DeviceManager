@@ -10,8 +10,8 @@ import GoogleSignIn
 import Firebase
 
 class AuthenticationService: NSObject, ObservableObject {
-    var authStatus: SignInState = .initial
-    var user: User
+    @Published var authStatus: SignInState = .initial
+    @Published var user: User
     
     var errorHandler: ((Error?) -> Void)? = nil
     
