@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct internship_swift_2App: App {
@@ -14,6 +15,7 @@ struct internship_swift_2App: App {
     
     init() {
         _authService = StateObject(wrappedValue: AuthenticationService(user: User()))
+        setupFirebase()
     }
     
     var body: some Scene {
@@ -22,4 +24,10 @@ struct internship_swift_2App: App {
                 .environmentObject(authService)
         }
     }
+}
+
+extension internship_swift_2App {
+  private func setupFirebase() {
+     FirebaseApp.configure()
+  }
 }
