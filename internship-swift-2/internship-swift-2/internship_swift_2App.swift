@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Firebase
+import AppCenter
+import AppCenterCrashes
 
 @main
 struct internship_swift_2App: App {
@@ -16,6 +18,7 @@ struct internship_swift_2App: App {
     init() {
         _authService = StateObject(wrappedValue: AuthenticationService(user: User()))
         setupFirebase()
+        setupAppcenter()
     }
     
     var body: some Scene {
@@ -27,7 +30,13 @@ struct internship_swift_2App: App {
 }
 
 extension internship_swift_2App {
-  private func setupFirebase() {
-     FirebaseApp.configure()
-  }
+    private func setupFirebase() {
+        FirebaseApp.configure()
+    }
+    
+    private func setupAppcenter() {
+        AppCenter.start(withAppSecret: "37d4f822-7ded-402b-af8c-e75bf313c4fe", services:[
+          Crashes.self
+        ])
+    }
 }

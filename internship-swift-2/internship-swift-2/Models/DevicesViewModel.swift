@@ -28,7 +28,7 @@ class DevicesViewModel: ObservableObject {
             
             self.devices = documents.map { (queryDocumentSnapshot) -> Device in
                 let data = queryDocumentSnapshot.data()
-                let UDID = data["UDID"] as? String ?? ""
+                let UDID = data["udid"] as? String ?? ""
                 let displayName = data["displayName"] as? String ?? ""
                 let usedBy = data["usedBy"] as? String ?? ""
                 return Device(UDID: UDID, displayName: displayName, usedBy: usedBy)
@@ -38,7 +38,7 @@ class DevicesViewModel: ObservableObject {
     
     func updateDeviceData(device: Device, user: User) {
         let devicesRef = db.collection("devices")
-        devicesRef.whereField("UDID", isEqualTo: device.UDID!).getDocuments(completion: { querySnapshot, err in
+        devicesRef.whereField("udid", isEqualTo: device.UDID!).getDocuments(completion: { querySnapshot, err in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {

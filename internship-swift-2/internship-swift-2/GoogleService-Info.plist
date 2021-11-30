@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>673785479349-tec0m1oktb893arhei4ct564l0igateh.apps.googleusercontent.com</string>
+	<string>591086452096-g4rdgaoop7m1rl0c39ak43r4ceuf0rmt.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.673785479349-tec0m1oktb893arhei4ct564l0igateh</string>
+	<string>com.googleusercontent.apps.591086452096-g4rdgaoop7m1rl0c39ak43r4ceuf0rmt</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBBsupG6nRF_UD7qQsLDzBQHnArAQ_6SG0</string>
+	<string>AIzaSyDuDEAjJ6CBabNICWRMtYeYKGCk2JtJXd0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>673785479349</string>
+	<string>591086452096</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.remotemode.internship-swift-2</string>
+	<string>com.wizrdsdev.devicemanager</string>
 	<key>PROJECT_ID</key>
-	<string>internship-swift-2</string>
+	<string>devicemanagement-dd7d8</string>
 	<key>STORAGE_BUCKET</key>
-	<string>internship-swift-2.appspot.com</string>
+	<string>devicemanagement-dd7d8.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:673785479349:ios:27eae3e2e89cf22a3cfefc</string>
+	<string>1:591086452096:ios:d6eace70f50a59e2f41565</string>
 </dict>
 </plist>
